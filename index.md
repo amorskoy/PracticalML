@@ -185,7 +185,7 @@ modFitLarge$finalModel$confusion
 
 11. As we see, worst in-sample error is 0.4% which is good signal
 
-12. Ensure high in-sample accuracy
+12. Ensure high out-of-sample accuracy
 
 ```r
 pred = predict(modFitLarge, newdata=test)
@@ -205,9 +205,9 @@ table(test$classe, pred)
 ##    pred
 ##        A    B    C    D    E
 ##   A 1395    0    0    0    0
-##   B    0  949    0    0    0
-##   C    0    1  854    0    0
-##   D    0    0    1  803    0
+##   B    1  948    0    0    0
+##   C    0    0  855    0    0
+##   D    0    0    0  804    0
 ##   E    0    0    0    0  901
 ```
 
@@ -216,10 +216,10 @@ sum(diag(table(test$classe, pred)))/nrow(test)
 ```
 
 ```
-## [1] 0.9995922
+## [1] 0.9997961
 ```
 
-13. As of high in-sample accuracy and low error rate, I expect low out-of-sample error rate.
+13. As of high in-sample accuracy and low error rate, I expect low out-of-sample error rate on problem cases.
 Also overfitting is still possible. But due to massive cleanup of 2/3 noisy vars,
 this effect reduced. Nice idea is to reseach covariation matrix and apply k-means clustering
 for deeper understanding of data - but it makes research more complex.

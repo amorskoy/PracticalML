@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "ML experiment on movement class"
 output:
   html_document:
     keep_md: yes

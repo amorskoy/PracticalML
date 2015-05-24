@@ -1,4 +1,4 @@
-# index
+# ML experiment on movement class
 
 Here you see experiment description for 'classe' prediction on Practical ML assignemnt.
 Research plan is:
@@ -205,9 +205,9 @@ table(test$classe, pred)
 ##    pred
 ##        A    B    C    D    E
 ##   A 1395    0    0    0    0
-##   B    1  948    0    0    0
-##   C    0    0  855    0    0
-##   D    0    0    0  804    0
+##   B    0  949    0    0    0
+##   C    0    1  854    0    0
+##   D    0    0    1  803    0
 ##   E    0    0    0    0  901
 ```
 
@@ -216,7 +216,7 @@ sum(diag(table(test$classe, pred)))/nrow(test)
 ```
 
 ```
-## [1] 0.9997961
+## [1] 0.9995922
 ```
 
 13. As of high in-sample accuracy and low error rate, I expect low out-of-sample error rate.
